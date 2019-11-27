@@ -8,7 +8,7 @@ package features;
  * 4) reduced code
  * 5) provides multiple implementation of a method in same class using different references of interface
  * 6) Sequential and Parallel Execution Support by passing behavior in methods
- * 7) Higher Efficiency (Utilizing Multicore CPU’s)
+ * 7) Higher Efficiency (Utilizing Multicore CPUâ€™s)
  */
 
 
@@ -17,24 +17,25 @@ package features;
  * create local or Anonymous class
  * */
 
-
+/* Functional Interface */
 interface Lambda{
 	public int calc(int a,int b);
 }
 
 public class TestLambdaExpression {
 
-	/* Application 1 */
+	/* Application 1 pass function implementation as a arguments */
 	public void retrieveImplementationOfFunction(Lambda a) {
 		System.out.println(a.calc(10, 20));
 	}
 	
-	/* Application 2 */
+	/* Application 2 function implemented inside another function */
 	public void functionInsideFunction() {
-		Lambda multiply = (int a,int b)->a*b; 
+		Lambda multiply = (int a,int b)->a*b;
+		System.out.println(multiply.calc(10,20));
 	}
 	
-	/* Application 3 */
+	/* Application 3 return fuction implementation */
 	public Lambda returnsfunctionImplementation() {
 		Lambda multiply = (int a,int b)->a*b; 
 		return multiply;
@@ -49,7 +50,7 @@ public class TestLambdaExpression {
 		obj.functionInsideFunction();
 		obj.retrieveImplementationOfFunction(add);
 		Lambda multiply = obj.returnsfunctionImplementation(); 
-	
+		
 		
 	}
 }

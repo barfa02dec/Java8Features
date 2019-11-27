@@ -24,7 +24,7 @@ interface Lambda{
 
 public class TestLambdaExpression {
 
-	/* Application 1 pass function implementation as a arguments */
+	/* Application 1  retrieve function implementation as a arguments */
 	public void retrieveImplementationOfFunction(Lambda a) {
 		System.out.println(a.calc(10, 20));
 	}
@@ -50,7 +50,7 @@ public class TestLambdaExpression {
 		obj.functionInsideFunction();
 		obj.retrieveImplementationOfFunction(add);
 		Lambda multiply = obj.returnsfunctionImplementation(); 
-		
+		System.out.println(multiply.calc(1, 2));
 		
 	}
 }
